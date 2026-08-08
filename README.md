@@ -66,3 +66,7 @@ scripts/gen-snippets.sh
 - `scripts/login.sh [site]` — `cargo compete login`
 
 初回だけ`chmod +x scripts/*.sh`で実行権限を付けるか、`bash scripts/<name>.sh`で実行する。
+
+## ライセンス
+
+[LICENSE](LICENSE)
