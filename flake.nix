@@ -32,7 +32,9 @@
           ];
 
           shellHook = ''
-            export PATH="$HOME/.cargo/bin:$PATH"
+            # Nix-provided rustc must win over anything in ~/.cargo/bin (e.g. a rustup toolchain),
+            # so append rather than prepend.
+            export PATH="$PATH:$HOME/.cargo/bin"
 
             if ! command -v cargo-compete >/dev/null 2>&1; then
               echo "[flake] installing cargo-compete..."

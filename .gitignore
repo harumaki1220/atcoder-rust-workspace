@@ -1,0 +1,19 @@
+# Cargo build artifacts (target-dir is shared here via .cargo/config.toml)
+/target/
+
+# Every package's dependencies in compete.toml are pinned with "=", so the
+# lockfile is fully deterministic and doesn't need to be committed.
+Cargo.lock
+
+# rust-analyzer/snippets config is a local, generated file (see settings.example.json)
+/.vscode/
+
+# Sample test cases fetched from AtCoder. Avoid redistributing problem
+# statements; these are re-fetched by scripts/new-contest.sh / cargo compete add.
+testcases/
+
+# rustfmt backup files
+**/*.rs.bk
+
+# For future credentials, if ever needed (unused for now)
+.env
